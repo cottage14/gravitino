@@ -19,16 +19,16 @@ Gravitino is a high-performance, geo-distributed, and federated metadata lake. I
 
 ![Gravitino Architecture](docs/assets/gravitino-architecture.png)
 
-Gravitino aims to provide several key features:
+Gravitino provides several key features:
 
 * Single Source of Truth for multi-regional data with geo-distributed architecture support.
 * Unified Data and AI asset management for both users and engines.
-* Security in one place, centralizing the security for different sources.
+* Centralizes security for different sources in one place.
 * Built-in data management and data access management.
 
 ## Contributing to Gravitino
 
-Gravitino is open source software available under the Apache 2.0 license. For information on how to contribute to Gravitino please see the [Contribution guidelines](CONTRIBUTING.md).
+Gravitino is open source software available under the Apache 2.0 license. For information on how to contribute to Gravitino, see the [Contribution guidelines](CONTRIBUTING.md).
 
 ## Online documentation
 
@@ -36,33 +36,30 @@ You can find the latest Gravitino documentation in the [doc folder](docs). This 
 
 ## Building Gravitino
 
-You can build Gravitino using Gradle. Currently you can build Gravitino on Linux and macOS, Windows isn't supported.
+You can build Gravitino using Gradle on Linux and macOS. Currently, Windows isn't supported.
 
-To build Gravitino, please run:
+To build Gravitino, run:
 
 ```shell
 ./gradlew clean build -x test
 ```
 
-If you want to build a distribution package, please run:
+If you want to build a distribution package, run:
 
 ```shell
 ./gradlew compileDistribution -x test
 ```
 
-to build a distribution package.
-
-Or:
+To build a compressed distribution package, run:
 
 ```shell
 ./gradlew assembleDistribution -x test
 ```
 
-to build a compressed distribution package.
 
 The directory `distribution` contains the generated binary distribution package.
 
-For the details of building and testing Gravitino, please see [How to build Gravitino](docs/how-to-build.md).
+For the details of building and testing Gravitino, see [How to build Gravitino](docs/how-to-build.md).
 
 ## Quick start
 
@@ -70,16 +67,15 @@ For the details of building and testing Gravitino, please see [How to build Grav
 
 If you already have a binary distribution package, go to the directory of the decompressed package.
 
-Before starting the Gravitino server, please configure the Gravitino server configuration file. The
-configuration file, `gravitino.conf`, is in the `conf` directory and follows the standard property file format. You can modify the configuration within this file.
+Before starting the Gravitino server, configure the Gravitino server configuration file, `gravitino.conf`, in the `conf` directory. It follows the standard property file format.
 
-To start the Gravitino server, please run:
+To start the Gravitino server, run:
 
 ```shell
 ./bin/gravitino.sh start
 ```
 
-To stop the Gravitino server, please run:
+To stop the Gravitino server, run:
 
 ```shell
 ./bin/gravitino.sh stop
@@ -87,7 +83,7 @@ To stop the Gravitino server, please run:
 
 ### Using Trino with Gravitino
 
-Gravitino provides a Trino connector to access the metadata in Gravitino. To use Trino with Gravitino, please follow the [trino-gravitino-connector doc](docs/trino-connector/index.md).
+Gravitino provides a Trino connector to access metadata. To use Trino with Gravitino, follow the [trino-gravitino-connector doc](docs/trino-connector/index.md).
 
 ## Development guide
 
@@ -97,6 +93,6 @@ Gravitino provides a Trino connector to access the metadata in Gravitino. To use
 
 ## License
 
-Gravitino is under the Apache License Version 2.0, See the [LICENSE](LICENSE) for the details.
+Gravitino is under the Apache License Version 2.0. See the [LICENSE](LICENSE) for details.
 
 <sub>Apache®, Apache Hadoop&reg;, Apache Hive&trade;, Apache Iceberg&trade;, Apache Kafka&reg;, Apache Spark&trade;, Apache Submarine&trade;, Apache Thrift&trade; and Apache Zeppelin&trade; are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.</sub>
